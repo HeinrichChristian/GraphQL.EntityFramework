@@ -14,7 +14,7 @@ static partial class ArgumentProcessor
     {
         if (ArgumentReader.TryReadId(getArguments, out var values))
         {
-            var predicate = ExpressionBuilder<TItem>.BuildPredicate("Id", Comparison.In, values);
+            var predicate = ExpressionBuilder<TItem>.BuildPredicate("ID", Comparison.In, values);
             queryable = queryable.Where(predicate);
         }
 
